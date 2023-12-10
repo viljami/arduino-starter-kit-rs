@@ -10,7 +10,7 @@ Chapters
 
 1. [Setting Up](chapter-1-setting-up/README.md)
     * Includes instructions to setup the development environment
-2. Spaceship Interface
+2. [Spaceship Interface](chapter-2-spaceship-interface/README.md)
 
 ## Debugging
 

@@ -1,10 +1,14 @@
-# Arduino.rs
+# Arduino Starter Kit in Rust
 
-Exercises of Arduino Starter Kit written in Rust.
+Arduino Starter Kit exercises written in Rust. The target board is the [_Arduino Uno R3_](https://store.arduino.cc/products/arduino-uno-rev3).
+
+I am big on Rust and picked it for working with Arduino Starter Kit. I got interested using Rust due to [Design Contracts](https://docs.rust-embedded.org/book/static-guarantees/design-contracts.html) and related [Zero cost abstraction](https://docs.rust-embedded.org/book/static-guarantees/zero-cost-abstractions.html).
+
+To setup the development environment for Rust see [Chapter 1: Setting Up](chapter-1-setting-up/README.md).
 
 Chapters
 
-1. Setting Up
+1. [Setting Up](chapter-1-setting-up/README.md)
     * Includes instructions to setup the development environment
 2. Spaceship Interface
 

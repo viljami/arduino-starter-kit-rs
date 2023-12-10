@@ -1,9 +1,5 @@
 # Chapter 1: Setting Up
 
-Rust project for the _Arduino Uno_.
-
-I am big on Rust and picked it for working with Arduino Starter Kit. I got interested using Rust due to [Design Contracts](https://docs.rust-embedded.org/book/static-guarantees/design-contracts.html) and related [Zero cost abstraction](https://docs.rust-embedded.org/book/static-guarantees/zero-cost-abstractions.html).
-
 Install [rustup](https://rustup.rs/) to manage Rust
 build targets on your machine.
 

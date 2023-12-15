@@ -66,7 +66,7 @@ export RAVEDUDE_PORT=/dev/tty.usbmodem146301
 
 ```sh
 cargo install cargo-generate
-cargo generate --git <https://github.com/Rahix/avr-hal-template.git>
+cargo generate --git https://github.com/Rahix/avr-hal-template.git
 ```
 
 ```sh

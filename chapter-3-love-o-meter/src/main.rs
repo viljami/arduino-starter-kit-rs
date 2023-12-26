@@ -1,10 +1,10 @@
 #![no_std]
 #![no_main]
 
+use components::{print, println};
 use embedded_hal::digital::v2::OutputPin;
 use panic_halt as _;
 use ufmt::derive::uDebug;
-use shared::{print, println};
 
 enum Pin<P2: OutputPin, P3: OutputPin, P4: OutputPin> {
     D2(P2),

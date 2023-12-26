@@ -2,8 +2,8 @@
 #![no_main]
 
 use arduino_hal::simple_pwm::{IntoPwmPin, Prescaler, Timer1Pwm, Timer2Pwm};
+use components::{print, println};
 use panic_halt as _;
-use shared::{print, println};
 
 #[arduino_hal::entry]
 fn main() -> ! {

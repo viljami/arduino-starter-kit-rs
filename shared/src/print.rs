@@ -8,18 +8,7 @@ pub const COMMUNICATION_SPEED: u32 = 57600; // Ravedude listen 57600 by default,
 pub static CONSOLE: interrupt::Mutex<RefCell<Option<Console>>> =
     interrupt::Mutex::new(RefCell::new(None));
 
-// macro_rules! print {
-//     ($($t:tt)*) => {
-//         interrupt::free(
-//             |cs| {
-//                 if let Some(console) = CONSOLE.borrow(cs).borrow_mut().as_mut() {
-//                     let _ = ufmt::uwrite!(console, $($t)*);
-//                 }
-//             },
-//         )
-//     };
-// }
-
+#[macro_export]
 macro_rules! println {
     ($($t:tt)*) => {
         avr_device::interrupt::free(

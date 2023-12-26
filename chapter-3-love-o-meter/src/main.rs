@@ -4,9 +4,7 @@
 use embedded_hal::digital::v2::OutputPin;
 use panic_halt as _;
 use ufmt::derive::uDebug;
-
-#[macro_use]
-mod print;
+use shared::{print, println};
 
 enum Pin<P2: OutputPin, P3: OutputPin, P4: OutputPin> {
     D2(P2),

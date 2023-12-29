@@ -2,6 +2,10 @@
 
 Rust project for the _Arduino Uno_.
 
+I needed to place the phototransistors more apart than in the chapter blueprint. This created the space to be able to use the color filters.
+
+Normally I don't like leaving commented out code in the repo... maybe the path of my stumble to get the exercise working is better documented with that particular commented out println.
+
 ## Build Instructions
 
 1. Install prerequisites as described in the [`avr-hal` README] (`avr-gcc`, `avr-libc`, `avrdude`, [`ravedude`]).

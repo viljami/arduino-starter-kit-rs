@@ -4,22 +4,38 @@
 use components::{print, println};
 use panic_halt as _;
 
+const ANGLE_MAX: u16 = 180;
+const POTENTIOMETER_MAX: u16 = 1023;
+const RANGE_MAX: u16 = 387;
+const RANGE_MIN: u16 = 207;
+const SERVO_COUNTS: u16 = 5000;
+const SERVO_MAX: u16 = 580;
+const SERVO_MIN: u16 = 135;
+
 fn potentiometer_to_angle(potentiometer_value: u16) -> u16 {
-    let a = potentiometer_value * 10 / 57; // round_up(1024 / 180)
-    if a > 180 {
-        180
+    // Multiplier 10 for increased accuracy and added 1 for round up
+    let a = potentiometer_value * 10 / (POTENTIOMETER_MAX * 10 / ANGLE_MAX + 1);
+    if a > ANGLE_MAX {
+        ANGLE_MAX
     } else {
         a
     }
 }
 
 fn angle_to_servo_ticks(angle: u16) -> u16 {
-    let a = (1350 + angle * 25) / 10; // (580 - 135) / 180 = 2,45 -> 2
-    if a > 580 {
-        580
+    // Multiplier 10 for increased accuracy and added 1 for round up
+    let divider = (SERVO_MAX - SERVO_MIN) * 10 / ANGLE_MAX + 1;
+    let a = (SERVO_MIN * 10 + angle * divider) / 10;
+    if a > SERVO_MAX {
+        SERVO_MAX
     } else {
         a
     }
+}
+
+fn adjust_range(servo_value: u16) -> u16 {
+    let servo_value = RANGE_MIN - SERVO_MIN + servo_value;
+    if servo_value > RANGE_MAX { RANGE_MAX } else { servo_value }
 }
 
 #[arduino_hal::entry]
@@ -34,8 +50,9 @@ fn main() -> ! {
     // - TC1 runs off a 250kHz clock, with 5000 counts per overflow => 50 Hz signal.
     // - Each count increases the duty-cycle by 4us.
     // - Use OC1A which is connected to D9 of the Arduino Uno.
+    // Based on: https://github.com/Rahix/avr-hal/blob/main/examples/arduino-uno/src/bin/uno-manual-servo.rs
     let tc1 = dp.TC1;
-    tc1.icr1.write(|w| w.bits(4999));
+    tc1.icr1.write(|w| w.bits(SERVO_COUNTS));
     tc1.tccr1a
         .write(|w| w.wgm1().bits(0b10).com1a().match_clear());
     tc1.tccr1b
@@ -58,11 +75,7 @@ fn main() -> ! {
         );
 
         // Range of motion adjusted to the product interface
-        let servo_value = 207 - 135 + servo_value;
-        let servo_value = if servo_value > 387 { 387 } else { servo_value };
-
-        // Based on: https://github.com/Rahix/avr-hal/blob/main/examples/arduino-uno/src/bin/uno-manual-servo.rs
-        tc1.ocr1a.write(|w| w.bits(servo_value));
+        tc1.ocr1a.write(|w| w.bits(adjust_range(servo_value)));
         arduino_hal::delay_ms(500);
     }
 }

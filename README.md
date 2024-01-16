@@ -1,8 +1,6 @@
 # Arduino Starter Kit in Rust
 
-Arduino Starter Kit exercises written in Rust. The target board is the [_Arduino Uno R3_](https://store.arduino.cc/products/arduino-uno-rev3).
-
-To setup the development environment for Rust see [Chapter 1: Setting Up](chapter-1-setting-up/README.md).
+Arduino Starter Kit exercises written in Rust. The target board is the [_Arduino Uno R3_](https://store.arduino.cc/products/arduino-uno-rev3). To setup the development environment for Rust see [Chapter 1: Setting Up](chapter-1-setting-up/README.md).
 
 Shared resources for chapters are in folder [components](components/README.md).
 
@@ -13,7 +11,7 @@ Shared resources for chapters are in folder [components](components/README.md).
 3. [Love-O-Meter](chapter-3-love-o-meter/README.md)
 4. [Color Mixing Lamp](chapter-4-color-mixing-lamp/README.md)
 5. [Mood Cue](chapter-5-mood-cue/README.md)
-
+6. [Light Theremin](chapter-6-light-theremin/README.md)
 
 ## Debugging
 

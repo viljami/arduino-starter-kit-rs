@@ -9,7 +9,7 @@ Shared resources for chapters are in folder [components](components/README.md).
 ## Chapters
 
 1. [Setting Up](chapter-1-setting-up/README.md)
-    * Includes instructions to setup the development environment
+, Includes instructions to setup the development environment
 2. [Spaceship Interface](chapter-2-spaceship-interface/README.md)
 3. [Love-O-Meter](chapter-3-love-o-meter/README.md)
 4. [Color Mixing Lamp](chapter-4-color-mixing-lamp/README.md)

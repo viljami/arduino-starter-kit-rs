@@ -1,5 +1,23 @@
 # Chapter 1: Setting Up
 
+Setting up a Arduino Rust project for Arduino. The test board has one red led light.
+
+![Arduino board with one red led light](https://github.com/viljami/arduino-starter-kit-rs/blob/main/assets/chapter-1-a.gif?raw=true)
+
+Arduino board with a red led and a button.
+
+![Arduino board with a red led and a button](https://github.com/viljami/arduino-starter-kit-rs/blob/main/assets/chapter-1-b.gif?raw=true)
+
+Arduino board with a red led and buttons in series.
+
+![Arduino board with a red led and buttons in series](https://github.com/viljami/arduino-starter-kit-rs/blob/main/assets/chapter-1-c.gif?raw=true)
+
+Arduino board with a red led and buttons parallel.
+
+![Arduino board with a red led and buttons parallel](https://github.com/viljami/arduino-starter-kit-rs/blob/main/assets/chapter-1-d.gif?raw=true)
+
+## Prerequisites
+
 Install [rustup](https://rustup.rs/) to manage Rust
 build targets on your machine.
 
@@ -13,15 +31,15 @@ rustup component add clippy --toolchain nightly-2023-08-08-x86_64-apple-darwin
 
 [Brew](https://brew.sh/) is handy package manager for OSX.
 
-You can use any editor of your choice for the Rust code. I have used [Visual Studio Code](https://code.visualstudio.com/). I recommend installing Rust related extensions from the editor's 'Extensions' tab.
+You can use any editor of your choice for the Rust code. I have used [Visual Studio Code](https://code.visualstudio.com/). I would recommend installing Rust related extensions from the editor's 'Extensions' tab.
 
 ```sh
 brew install vscode
 ```
 
-## Setup Development environment
+## Setup Development Environment
 
-Setting up for [Linux and Windows](https://blog.logrocket.com/complete-guide-running-rust-arduino/). Here I have confirmed functional OSX setup:
+Setting up for [Linux and Windows](https://blog.logrocket.com/complete-guide-running-rust-arduino/). The following instructions are for OSX.
 
 ```sh
 xcode-select --install
@@ -62,7 +80,9 @@ l /dev/tty.* # Arduino on OSX prints like tty.usbmodem146301
 export RAVEDUDE_PORT=/dev/tty.usbmodem146301
 ```
 
-## Create your first project
+## Create a Project
+
+The template can be used for different Arduino boards.
 
 ```sh
 cargo install cargo-generate

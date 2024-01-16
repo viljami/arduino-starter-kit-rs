@@ -1,6 +1,8 @@
 # Chapter 3: Love-O-Meter
 
-Rust project for the _Arduino Uno_.
+Rust project for the _Arduino Uno_ with a thermometer input.
+
+![Arduino board with a thermometer](https://github.com/viljami/arduino-starter-kit-rs/blob/main/assets/chapter-3.jpg?raw=true)
 
 ## Build Instructions
 

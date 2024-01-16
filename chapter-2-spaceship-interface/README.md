@@ -1,6 +1,9 @@
 # Chapter 2 Spaceship Interface
 
-Rust project for the _Arduino Uno_.
+Rust project for the _Arduino Uno_ with a button to trigger red leds and a green led to indicate idle mode.
+
+![Arduino board with a button and](https://github.com/viljami/arduino-starter-kit-rs/blob/main/assets/chapter-2.gif?raw=true)
+
 
 ## Build Instructions
 

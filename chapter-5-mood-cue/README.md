@@ -1,8 +1,11 @@
 # Chapter 5: Mood Cue
 
-Rust project for the _Arduino Uno_.
+Rust project for the _Arduino Uno_ with a servo motor.
 
 My servo motor cables were in red, white, black order which made me need to change the order of the wiring on the board.
+
+![Arduino board with a servo motor](https://github.com/viljami/arduino-starter-kit-rs/blob/main/assets/chapter-5.gif?raw=true)
+
 
 I am starting to miss red and black cables for power and ground connections. It would make the connections a lot easier to reason. I'd like to the power and ground from the board analog and digital inputs and outputs - all with different colors. And be consistent. Right now I am happy to be experiencing the need for color difference. I can leverage it after the starter kit exercises.
 

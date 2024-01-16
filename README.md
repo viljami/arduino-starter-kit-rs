@@ -2,15 +2,19 @@
 
 Arduino Starter Kit exercises written in Rust. The target board is the [_Arduino Uno R3_](https://store.arduino.cc/products/arduino-uno-rev3).
 
-I am big on Rust and picked it for working with Arduino Starter Kit. I got interested using Rust due to [Design Contracts](https://docs.rust-embedded.org/book/static-guarantees/design-contracts.html) and related [Zero cost abstraction](https://docs.rust-embedded.org/book/static-guarantees/zero-cost-abstractions.html).
-
 To setup the development environment for Rust see [Chapter 1: Setting Up](chapter-1-setting-up/README.md).
 
-Chapters
+Shared resources for chapters are in folder [components](components/README.md).
+
+## Chapters
 
 1. [Setting Up](chapter-1-setting-up/README.md)
     * Includes instructions to setup the development environment
 2. [Spaceship Interface](chapter-2-spaceship-interface/README.md)
+3. [Love-O-Meter](chapter-3-love-o-meter/README.md)
+4. [Color Mixing Lamp](chapter-4-color-mixing-lamp/README.md)
+5. [Mood Cue](chapter-5-mood-cue/README.md)
+
 
 ## Debugging
 
@@ -29,8 +33,9 @@ cargo flamegraph
 * [Embedded Rust Book](https://docs.rust-embedded.org/book/)
 * [Embedded Rust Weekly Newsletter](https://www.trackawesomelist.com/rust-embedded/awesome-embedded-rust/week/)
 * [Embassy Framework on ESP](https://apollolabsblog.hashnode.dev/embassy-on-esp-getting-started)
+* [Design Contracts](https://docs.rust-embedded.org/book/static-guarantees/design-contracts.html)
+* [Zero cost abstraction](https://docs.rust-embedded.org/book/static-guarantees/zero-cost-abstractions.html).
 
 ## License
 
-* MIT license
-   ([LICENSE](LICENSE) or <http://opensource.org/licenses/MIT>)
+[MIT LICENSE](LICENSE) or <http://opensource.org/licenses/MIT>

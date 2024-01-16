@@ -1,10 +1,13 @@
 # Chapter 4: Color Mixing Lamp
 
-Rust project for the _Arduino Uno_.
+Rust project for the _Arduino Uno_ with phototransistor inputs.
 
 I needed to place the phototransistors more apart than in the chapter blueprint. This created the space to be able to use the color filters.
 
-Normally I don't like leaving commented out code in the repo... maybe the path of my stumble to get the exercise working is better documented with that particular commented out println.
+Normally I don't like leaving commented out code in the repo... maybe the path of my stumble to get the exercise working is better documented with the commented out `println`.
+
+![Arduino board with phototransistors](https://github.com/viljami/arduino-starter-kit-rs/blob/main/assets/chapter-4.gif?raw=true)
+
 
 ## Build Instructions
 
